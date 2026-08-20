@@ -8,6 +8,9 @@ This is a **frontend-only** module built as part of the VELoop Rewards internshi
 
 [\[Add your deployed link here\]](https://captcha-earn-module.vercel.app/)
 
+<img width="1920" height="1080" alt="Screenshot (272)" src="https://github.com/user-attachments/assets/6a6df435-002f-4201-bf9e-fd233865562c" />
+
+
 ## Features
 
 - Dynamically generated CAPTCHA challenges (letters + digits)

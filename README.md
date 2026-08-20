@@ -6,7 +6,7 @@ This is a **frontend-only** module built as part of the VELoop Rewards internshi
 
 ## Live Demo
 
-[Add your deployed link here]
+[\[Add your deployed link here\]](https://captcha-earn-module.vercel.app/)
 
 ## Features
 

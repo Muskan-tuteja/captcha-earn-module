@@ -8,11 +8,7 @@ This is a **frontend-only** module built as part of the VELoop Rewards internshi
 
 [\[Add your deployed link here\]](https://captcha-earn-module.vercel.app/)
 
-<img width="1920" height="1028" alt="Screenshot (272)" src="https://github.com/user-attachments/assets/5d2a9dd8-ba0f-4431-9858-137b7755d52b" />
 
-<img width="1920" height="1035" alt="Screenshot (274)" src="https://github.com/user-attachments/assets/dd77ef68-90e9-49c9-9380-d056548a812a" />
-
-<img width="1920" height="1011" alt="Screenshot (273)" src="https://github.com/user-attachments/assets/ecf7a386-e7b8-4a12-832d-03847f602e07" />
 
 
 

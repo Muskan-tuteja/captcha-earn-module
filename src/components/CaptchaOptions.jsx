@@ -14,7 +14,7 @@ function CaptchaOptions({ options, onSelectOption }) {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-2 gap-3 mb-6">
       {options.map((option, index) => {
         const isSelected = selected === option;
 
@@ -23,18 +23,18 @@ function CaptchaOptions({ options, onSelectOption }) {
             key={option}
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 + index * 0.06, duration: 0.35 }}
+            transition={{ delay: 0.05 * index, duration: 0.3 }}
             whileHover={!locked ? { scale: 1.03, y: -2 } : {}}
             whileTap={!locked ? { scale: 0.97 } : {}}
             onClick={() => handleClick(option)}
             disabled={locked}
             className={`
-              relative font-mono text-base font-semibold tracking-wider py-4 rounded-xl
-              border transition-colors duration-200
+              relative font-mono text-lg font-bold tracking-wider py-5 rounded-2xl
+              border-2 transition-colors duration-200 bg-slate-900/60
               ${
                 isSelected
-                  ? "border-emerald-400 bg-emerald-400/10 text-emerald-300"
-                  : "border-slate-800 bg-slate-950 text-slate-200 hover:border-slate-600 hover:bg-slate-900"
+                  ? "border-purple-400 text-white shadow-[0_0_24px_rgba(192,132,252,0.5)]"
+                  : "border-slate-700/60 text-slate-100 hover:border-slate-500"
               }
               ${locked && !isSelected ? "opacity-40" : ""}
               disabled:cursor-not-allowed
@@ -42,24 +42,15 @@ function CaptchaOptions({ options, onSelectOption }) {
           >
             {option}
 
-            {/* selection pulse + checkmark */}
             {isSelected && (
-              <>
-                <motion.span
-                  initial={{ opacity: 0.6, scale: 1 }}
-                  animate={{ opacity: 0, scale: 1.15 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-0 rounded-xl border-2 border-emerald-400"
-                />
-                <motion.div
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.15, duration: 0.25 }}
-                  className="absolute -top-2 -right-2 bg-emerald-400 rounded-full p-1"
-                >
-                  <Check size={12} className="text-slate-950" strokeWidth={3} />
-                </motion.div>
-              </>
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.1, duration: 0.25 }}
+                className="absolute top-1/2 right-4 -translate-y-1/2 bg-purple-400 rounded-full p-1.5"
+              >
+                <Check size={14} className="text-slate-950" strokeWidth={3} />
+              </motion.div>
             )}
           </motion.button>
         );

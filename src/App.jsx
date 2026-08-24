@@ -69,7 +69,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center p-4 overflow-hidden">
+   <div
+  className="min-h-screen flex items-center justify-center p-4 overflow-hidden"
+  style={{
+    background:
+      "radial-gradient(circle at 15% 10%, rgba(90,60,220,0.28), transparent 42%), radial-gradient(circle at 85% 90%, rgba(190,60,220,0.18), transparent 42%), #05050f",
+  }}
+>
       <AnimatePresence mode="wait">
         {appState === STATES.CAPTCHA && (
           <CaptchaPage
